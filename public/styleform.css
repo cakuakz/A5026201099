@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+.container {
+    background-color: var(--clr-dark);
+    border-radius: 5px;
+    box-shadow: var(--bs);
+    width: 400px;
+    max-width: 100%;
+    color: var(--clr-accent);
+}
+
+.header {
+  margin-top: 2em;
+}
+
+body{
+    background-color: aqua;
+}

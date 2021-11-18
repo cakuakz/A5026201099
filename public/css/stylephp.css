@@ -1,0 +1,32 @@
+.col {
+    background-color: #303030;
+    color: #16e0bd;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color: black;
+}
+
+.container {
+    background-color: #303030;
+    color: #16e0bd;
+}
+
+.form-control {
+    margin-left: 8em;
+    margin-right: 8em;
+    text-align: center;
+}
+
+body {
+    background-image: url("beach.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
