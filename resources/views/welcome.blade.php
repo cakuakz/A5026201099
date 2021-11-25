@@ -93,6 +93,7 @@
                     <a href="praktikum2">PRAKTIKUM 2</a>
                     <a href="ets1">ETS</a>
                     <a href="hal1php">TUGAS PHP</a>
+                    <a href="pendapatan">TUGAS PENDAPATAN</a>
                 </div>
             </div>
         </div>

@@ -27,6 +27,16 @@ Route::get('ets1', 'ViewController@showForm' );
 Route::get('hal1php', 'ViewController@phpHalSatu' );
 Route::post('hal2php', 'ViewController@phpHalDua' );
 
+Route::get('pendapatan', function () {
+    return view('pendapatan.index');
+});
 
+Route::get('/pendapatan','PendapatanController@index');
 
+Route::get('/pendapatan/tambah','PendapatanController@tambah');
+Route::post('/pendapatan/store','PendapatanController@store');
 
+Route::get('/pendapatan/edit/{id}','PendapatanController@edit');
+Route::post('/pendapatan/update/','PendapatanController@update');
+
+Route::get('/pendapatan/hapus/{id}','PendapatanController@hapus');
