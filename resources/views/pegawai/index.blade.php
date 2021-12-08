@@ -1,10 +1,15 @@
+@extends('layout.bahagia')
+@section('title','Data Absen Pegawai')
+@section('konten')
+
+@section('judulhalaman', 'Daftar Absensi Pegawai')
+
 <html>
 <head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+	<title>CRUD Data Pegawai</title>
 </head>
 <body>
 
-	<h2>www.malasngoding.com</h2>
 	<h3>Data Pegawai</h3>
 
 	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
@@ -12,7 +17,7 @@
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table class="table table-striped table-hover">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -27,9 +32,9 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+				<a class="btn btn-primary btn-sm" href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
 				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+				<a class="btn btn-danger btn-sm" href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
@@ -38,3 +43,4 @@
 
 </body>
 </html>
+@endsection

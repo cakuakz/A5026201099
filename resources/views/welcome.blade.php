@@ -97,7 +97,7 @@
                     <br>
                     <a href="/pegawai">TUGAS Pegawai</a>
                     <a href="pendapatan">TUGAS PENDAPATAN</a>
-                    <a href="/absen">TUGAS ABSENSI</a>
+                    <a href="/bahagia">TUGAS ABSENSI</a>
                 </div>
             </div>
         </div>

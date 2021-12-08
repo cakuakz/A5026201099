@@ -56,3 +56,9 @@ Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+Route::get('/bahagia', function() {
+    return view('layout.bahagia');
+});
+
+
