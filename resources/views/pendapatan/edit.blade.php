@@ -16,15 +16,27 @@
 	<br/>
 	<br/>
 
-	@foreach($pendapatan as $p)
+	@foreach($pendapatan as $pe)
 	<form action="/pendapatan/update" method="post">
 		{{ csrf_field() }}
-        <input type="hidden" name="id" value="{{ $p->ID }}"> <br/>
-		IDPegawai <input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}"> <br/>
-		Bulan <input type="number" required="required" name="Bulan" value="{{ $p->Bulan }}"> <br/>
-		Tahun <input type="text" required="required" name="Tahun" value="{{ $p->Tahun }}"> <br/>
-		Gaji <input type="number" required name="Gaji" value="{{ $p->Gaji }}"> <br/>
-        Tunjangan <input type="number" required name="Tunjangan" value="{{ $p->Tunjangan }}"> <br/>
+        <input type="hidden" name="id" value="{{ $pe->ID }}"> <br/>
+		<br>
+
+        <label class="col-sm-2 control-label">IDPegawai</label>
+        <div class="col-sm-10">
+            <select name="IDPegawai">
+            @foreach($pegawai as $p)
+             <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $pe->IDPegawai ) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
+            @endforeach
+            </select>
+        </div>
+        <br>
+        <br>
+
+		Bulan <input type="number" required="required" name="Bulan" value="{{ $pe->Bulan }}"> <br/>
+		Tahun <input type="text" required="required" name="Tahun" value="{{ $pe->Tahun }}"> <br/>
+		Gaji <input type="number" required name="Gaji" value="{{ $pe->Gaji }}"> <br/>
+        Tunjangan <input type="number" required name="Tunjangan" value="{{ $pe->Tunjangan }}"> <br/>
         <input type="submit" value="Simpan Data">
 	</form>
 	@endforeach

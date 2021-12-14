@@ -11,7 +11,11 @@ class AbsenController extends Controller
     public function indexabsen()
     {
         // mengambil data dari table absen
-        $absen = DB::table('absen')->get();
+        $absen = DB::table('absen')
+       ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+       ->select('absen.*', 'pegawai.pegawai_nama')
+       ->paginate() ;
+
 
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen]);
@@ -39,7 +43,7 @@ class AbsenController extends Controller
         // alihkan halaman ke halaman absen
         return redirect('/absen');
     }
-    
+
     // method untuk edit data absen
     public function edit($id)
     {

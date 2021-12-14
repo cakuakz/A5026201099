@@ -19,7 +19,16 @@
 
 	<form action="/pendapatan/store" method="post">
 		{{ csrf_field() }}
-		IDPegawai <input type="number" name="IDPegawai" required="required"> <br/>
+
+		<label class="col-sm-2 control-label">IDPegawai</label>
+        <div class="col-sm-10">
+            <select name="IDPegawai">
+            @foreach($pegawai as $p)
+            <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
+            @endforeach
+            </select>
+        </div>
+        <br>
 		Bulan <input type="number" name="Bulan" required="required"> <br/>
 		Tahun <input type="text" name="Tahun" required="required"> <br/>
         Gaji <input type="number" name="Gaji" required="required"> <br/>

@@ -31,14 +31,20 @@ Route::get('pendapatan', function () {
     return view('pendapatan.index');
 });
 
-Route::get('/pendapatan','PendapatanController@index');
+Route::get('/bank','BankController@index');
+Route::get('/bank/cari','BankController@cari');
+Route::get('/bank/tambah','BankController@tambah');
+Route::post('/bank/store','BankController@store');
+Route::get('/bank/edit/{id}','BankController@edit');
+Route::post('/bank/update','BankController@update');
+Route::get('/bank/hapus/{id}','BankController@hapus');
+Route::get('/bank/view/{id}','BankController@detail');
 
+Route::get('/pendapatan','PendapatanController@index');
 Route::get('/pendapatan/tambah','PendapatanController@tambah');
 Route::post('/pendapatan/store','PendapatanController@store');
-
 Route::get('/pendapatan/edit/{id}','PendapatanController@edit');
 Route::post('/pendapatan/update/','PendapatanController@update');
-
 Route::get('/pendapatan/hapus/{id}','PendapatanController@hapus');
 
 //route CRUD absen
@@ -50,12 +56,14 @@ Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
 
 Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/cari','PegawaiController@cari');
 Route::get('/pegawai/tambah','PegawaiController@tambah');
 Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
-Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/view/{id}','PegawaiController@detail');
+
 
 Route::get('/bahagia', function() {
     return view('layout.bahagia');

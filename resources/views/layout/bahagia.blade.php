@@ -70,8 +70,7 @@
               <li><a href="/pegawai">Pegawai</a></li>
               <li><a href="/absen">Absen</a></li>
               <li><a href="/pendapatan">Pendapatan</a></li>
-              <li><a href="#">Minggu Depan</a></li>
-              <li><a href="#">Praktikum</a></li>
+              <li><a href="/bank">Bank</a></li>
             </ul>
           </div>
         </div>
@@ -92,8 +91,7 @@
                 <li><a href="/pegawai">Pegawai</a></li>
                 <li><a href="/absen">Absen</a></li>
                 <li><a href="/pendapatan">Pendapatan</a></li>
-                <li><a href="#">Minggu Depan</a></li>
-                <li><a href="#section3">Praktikum</a></li>
+                <li><a href="/bank">Bank</a></li>
                 </ul><br>
             </div>
 
