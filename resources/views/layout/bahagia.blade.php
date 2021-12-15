@@ -93,12 +93,13 @@
                 <li><a href="/pendapatan">Pendapatan</a></li>
                 <li><a href="/bank">Bank</a></li>
                 </ul><br>
+
             </div>
 
 
             <div class="col-sm-9">
                 <div class="well">
-                    <h3>@yield('judulhalaman')</h3>
+                    <h3>@yield('5026201099-M.Rafi Irfansyah')</h3>
 
                     @section('konten')
 

@@ -1,5 +1,5 @@
 @extends('layout.bahagia')
-@section('title','Data Bank')
+@section('title','5026201099-M.Rafi Irfansyah')
 @section('konten')
 
 @section('judulhalaman', 'Daftar Bank')
@@ -12,7 +12,7 @@
 
     <br>
 
-	<a href="/bank/tambah"> + Tambah Bank Baru</a>
+	<a href="/bank/add"> + Tambah Bank Baru</a>
 
 	<br/>
 	<br/>
@@ -30,6 +30,8 @@
 			<th>Merk Bank</th>
 			<th>Jumlah Bank</th>
 			<th>Ketersediaan</th>
+            <th>Opsi</th>
+            <th>Views Page</th>
 		</tr>
 		@foreach($bank as $b)
 		<tr>
@@ -44,6 +46,10 @@
 				|
 				<a class="btn btn-danger btn-sm" href="/bank/hapus/{{ $b->kodebank }}">Hapus</a>
 			</td>
+
+            @foreach ($pagecounter as $pc)
+            <td>{{ $pc->Jumlah }}</td>
+            @endforeach
 		</tr>
 		@endforeach
 	</table>

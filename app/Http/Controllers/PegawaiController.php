@@ -10,9 +10,10 @@ class PegawaiController extends Controller
 {
     public function index()
     {
-
+        DB::table('pagecounter')->increment('Jumlah');
+        $pagecounter = DB::table('pagecounter')->get();
         $pegawai = DB::table('pegawai')->paginate(5) ;
-    	return view('pegawai.index',['pegawai' => $pegawai]);
+    	return view('pegawai.index',['pegawai' => $pegawai, 'pagecounter' => $pagecounter]);
 
     }
 

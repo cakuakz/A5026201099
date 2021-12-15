@@ -1,5 +1,5 @@
 @extends('layout.bahagia')
-@section('title','Data Absen Pegawai')
+@section('title','5026201099-M.Rafi Irfansyah')
 @section('konten')
 
 @section('judulhalaman', 'Daftar Absensi Pegawai')
@@ -24,6 +24,7 @@
                     <th>Tanggal</th>
                     <th>Status</th>
                     <th>Opsi</th>
+                    <th>Views Page</th>
                 </tr>
                 @foreach($absen as $a)
                 <tr>
@@ -36,6 +37,9 @@
                         |
                         <a class="btn btn-danger btn-sm" href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
                     </td>
+                    @foreach ($pagecounter as $pc)
+                    <td>{{ $pc->Jumlah }}</td>
+                    @endforeach
                 </tr>
                 @endforeach
             </table>

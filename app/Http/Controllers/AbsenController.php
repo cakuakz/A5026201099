@@ -16,9 +16,11 @@ class AbsenController extends Controller
        ->select('absen.*', 'pegawai.pegawai_nama')
        ->paginate() ;
 
+       DB::table('pagecounter')->increment('Jumlah');
+        $pagecounter = DB::table('pagecounter')->get();
 
         // mengirim data absen ke view indexabsen
-        return view('absen.indexabsen', ['absen' => $absen]);
+        return view('absen.indexabsen', ['absen' => $absen, 'pagecounter' => $pagecounter]);
     }
 
     // method untuk menampilkan view form tambah absen

@@ -13,7 +13,10 @@ class PendapatanController extends Controller
        ->select('pendapatan.*', 'pegawai.pegawai_nama')
        ->paginate();
 
-       return view('pendapatan.index',['pendapatan' => $pendapatan]);
+       DB::table('pagecounter')->increment('Jumlah');
+        $pagecounter = DB::table('pagecounter')->get();
+
+       return view('pendapatan.index',['pendapatan' => $pendapatan, 'pagecounter' => $pagecounter]);
     }
 
     public function tambah()

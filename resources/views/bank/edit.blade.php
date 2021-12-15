@@ -36,7 +36,7 @@
         </div>
         <br>
 
-        Status<br/>
+        Ketersediaan<br/>
                 <input type="radio" id="html" name="tersedia" value="Y" @if ($b->tersedia === 'Y' ) checked="checked" @endif>
                 <label for="html">Tersedia</label><br>
                 <input type="radio" id="css" name="tersedia" value="T"  @if ($b->tersedia === 'T' ) checked="checked" @endif>
@@ -44,8 +44,10 @@
 
 	 <p><input type="submit" value="Simpan Data"></p>
 	</form>
+    
     <p> <a href="/bank"> Kembali</a></p>
-	@endforeach
+
+    @endforeach
 </body>
 </html>
 @endsection

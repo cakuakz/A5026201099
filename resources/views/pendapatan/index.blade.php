@@ -1,5 +1,5 @@
 @extends('layout.bahagia')
-@section('title','Data Pendapatan Pegawai')
+@section('title','5026201099-M.Rafi Irfansyah')
 @section('konten')
 
 @section('judulhalaman', 'Daftar Pendapatan')
@@ -24,6 +24,7 @@
 			<th>Gaji</th>
             <th>Tunjangan</th>
             <th>Opsi</th>
+            <th>Views Page</th>
 		</tr>
 		@foreach($pendapatan as $p)
 		<tr>
@@ -38,6 +39,9 @@
 				|
 				<a href="/pendapatan/hapus/{{ $p->ID }}">Hapus</a>
 			</td>
+            @foreach ($pagecounter as $pc)
+            <td>{{ $pc->Jumlah }}</td>
+            @endforeach
 		</tr>
 		@endforeach
 	</table>

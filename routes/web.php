@@ -31,14 +31,7 @@ Route::get('pendapatan', function () {
     return view('pendapatan.index');
 });
 
-Route::get('/bank','BankController@index');
-Route::get('/bank/cari','BankController@cari');
-Route::get('/bank/tambah','BankController@tambah');
-Route::post('/bank/store','BankController@store');
-Route::get('/bank/edit/{id}','BankController@edit');
-Route::post('/bank/update','BankController@update');
-Route::get('/bank/hapus/{id}','BankController@hapus');
-Route::get('/bank/view/{id}','BankController@detail');
+
 
 Route::get('/pendapatan','PendapatanController@index');
 Route::get('/pendapatan/tambah','PendapatanController@tambah');
@@ -64,6 +57,17 @@ Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/pegawai/view/{id}','PegawaiController@detail');
 
+Route::get('/bank','BankController@indexbank');
+Route::get('/bank/cari','BankController@cari');
+Route::get('/bank/add','BankController@add');
+Route::post('/bank/store','BankController@store');
+Route::get('/bank/edit/{id}','BankController@edit');
+Route::post('/bank/update','BankController@update');
+Route::get('/bank/hapus/{id}','BankController@hapus');
+Route::get('/bank/view/{id}','BankController@detail');
+
+Route::get('/views', 'PageController@index');
+// Route::get('/bahagia', )
 
 Route::get('/bahagia', function() {
     return view('layout.bahagia');
